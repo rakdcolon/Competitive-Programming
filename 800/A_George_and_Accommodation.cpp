@@ -4,16 +4,16 @@ using namespace std;
 
 void solve() 
 {
-    int a, b;
-    cin >> a >> b;
-
+    int n;
+    cin >> n;
     int c = 0;
-    
-    while (a <= b)
+
+    for (int i = 0; i < n; i++)
     {
-        a *= 3;
-        b *= 2;
-        c++;
+        int p, q;
+        cin >> p >> q;
+
+        if (q - p >= 2) c++;
     }
 
     cout << c;

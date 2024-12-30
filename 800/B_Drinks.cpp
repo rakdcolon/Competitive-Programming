@@ -4,19 +4,18 @@ using namespace std;
 
 void solve() 
 {
-    int a, b;
-    cin >> a >> b;
-
+    int n;
+    cin >> n;
     int c = 0;
-    
-    while (a <= b)
+
+    for (int i = 0; i < n; i++)
     {
-        a *= 3;
-        b *= 2;
-        c++;
+        int a;
+        cin >> a;
+        c += a;
     }
 
-    cout << c;
+    cout << (1.0) * c / n;
 }
 
 int main() 

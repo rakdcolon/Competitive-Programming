@@ -8,33 +8,15 @@ void solve()
     string s;
     cin >> n >> t >> s;
 
-    if (n == 1)
+    while (t--)
     {
-        cout << s;
-        return;
-    }
-
-    int l = 0;
-    int r = 1;
-
-    while (r < n)
-    {
-        char a = s[l];
-        char b = s[r];
-
-        if (a == 'B' && b == 'G')
+        for (int i = 0; i < s.length() - 1; i++)
         {
-            s[l] = b;
-            s[r] = a;
-            l++;
+            if (s[i] == 'B' && s[i + 1] == 'G')
+            {
+                s[i] = 'G'; s[i + 1] = 'B'; i++;
+            }
         }
-
-        if (r - l == t)
-        {
-            l++;
-        }
-
-        r++;
     }
 
     cout << s;
